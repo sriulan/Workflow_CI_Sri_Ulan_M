@@ -21,8 +21,6 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install mlflow==2.19.0
-          pip install tensorflow==2.18.0
-          pip install numpy pandas scikit-learn pillow
 
       - name: Run Training
         run: |
