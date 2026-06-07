@@ -25,3 +25,14 @@ jobs:
       - name: Run Training
         run: |
           python MLProject/modelling.py
+
+      - name: Create Artifact
+        run: |
+          mkdir artifacts
+          echo "Workflow CI berhasil" > artifacts/result.txt
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: training-artifact
+          path: artifacts/
