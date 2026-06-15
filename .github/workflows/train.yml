@@ -22,9 +22,10 @@ jobs:
         run: |
           pip install mlflow==2.19.0
 
-      - name: Run Training
+      - name: Run MLflow Project
         run: |
-          python MLProject/modelling.py
+          cd MLProject
+          mlflow run .
 
       - name: Create Artifact
         run: |
