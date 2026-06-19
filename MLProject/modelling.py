@@ -20,6 +20,10 @@ train_dir = os.path.join(BASE_DIR, "train")
 val_dir = os.path.join(BASE_DIR, "val")
 test_dir = os.path.join(BASE_DIR, "test")
 
+if not os.path.exists(train_dir):
+    print("Dataset tidak ditemukan. Skip training pada CI.")
+    raise SystemExit(0)
+    
 # ======================
 # DATA PREPROCESSING
 # ======================
